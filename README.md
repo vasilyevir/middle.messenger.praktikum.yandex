@@ -76,7 +76,6 @@ README — первое, что прочитает пользователь, к�
 
 ### **Примеры README**
 
-- «[Реакт](https://github.com/facebook/react)»,
 - «[Эхо](https://github.com/labstack/echo)»,
 - «[Вебпак](https://github.com/webpack/webpack)»,
 - «[ТДенгине](https://github.com/taosdata/TDengine)»,

@@ -1,0 +1,76 @@
+---
+styles: ../styles/pages/profile.scss
+bodyStyle: messenger-grid messenger-grid_change-profile
+link: ./messenger.hbs
+display_name: Иван
+fieldsInputs:
+    -
+        name: email
+        value: pochta@yandex.ru
+        type: email
+        isDisabled: false
+        title: Почта
+    -
+        name: login
+        value: ivanivanov
+        type: email
+        isDisabled: false
+        title: Логин
+    -
+        name: first_name
+        value: Иван
+        type: text
+        isDisabled: false
+        title: Имя
+    -
+        name: second_name
+        value: Иванов
+        type: text
+        isDisabled: false
+        title: Фамилия
+    -
+        name: display_name
+        value: Иван
+        type: text
+        isDisabled: false
+        title: Имя в чате
+    -
+        name: phone
+        value: +7 (909) 967 30 30
+        type: tel
+        isDisabled: false
+        title: Телефон
+button:
+        title: Сохранить
+        link: ./profile.hbs
+---
+
+{{#extend "app" this}}
+    {{#content "navbar"}}
+        <div class="navbar navbar_change-profile">
+            <a href="{{link}}" class="navbar__link">
+                <img src="../assets/icons/arrow.svg">
+            </a>
+        </div>
+    {{/content}}
+
+    {{#content "main"}}
+        <div class="profile">
+            <div class="profile__avatar">
+                <img class="profile__avatar-image" src="../assets/avatar.jpg">
+                <div class="profile__avatar-hover">
+                    <p class="profile__avatar-text">Поменять аватар</p>
+                </div>
+            </div>
+            <h1 class="profile__header">{{display_name}}</h1>
+            <div class="profile__inputs-container">
+                {{#each fieldsInputs}}
+                    {{> "change-profile-input" this}}
+                {{/each}}
+            </div>
+            <div class="profile__inputs-container profile__inputs-container_save-button">
+                {{> "auth-button" button}}
+            </div>
+        </div>
+    {{/content}}
+{{/extend}}

@@ -1,0 +1,13 @@
+{{#extend "index" styles='../styles/pages/auth.scss'}}
+    {{#content "body"}}
+        <main class="auth-container">
+            {{#extend "card" this}}
+                {{#content "cardBody"}}
+                    {{#each fields}}
+                        {{> "input"}}
+                    {{/each}}
+                {{/content}}
+            {{/extend}}
+        </main>
+    {{/content}}
+{{/extend}}

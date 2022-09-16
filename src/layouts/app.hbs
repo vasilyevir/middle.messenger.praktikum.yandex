@@ -1,0 +1,12 @@
+{{#extend "index" styles}}
+    {{#content "body"}}
+        <div id="root" {{#if this.bodyStyle}}class="{{this.bodyStyle}}"{{/if}}>
+            <header>
+                {{{block "navbar"}}}
+            </header>
+            <main>
+                {{{block "main"}}}
+            </main>
+        </div>
+    {{/content}}
+{{/extend}}

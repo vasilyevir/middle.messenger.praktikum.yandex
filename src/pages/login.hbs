@@ -1,0 +1,23 @@
+---
+header: Вход
+fields:
+    -
+        id: email
+        placeholder: Почта
+        type: email
+        name: email
+        errorMessage: Неверный логин
+    -
+        id: password
+        placeholder: Ваш пароль
+        type: text
+        name: password
+button:
+    link: ./messenger.hbs
+    title: Авторизоваться
+link:
+    link: ./signup.hbs
+    title: Нет аккаунта?
+---
+
+{{!< auth}}

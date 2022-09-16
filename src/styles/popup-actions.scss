@@ -1,0 +1,19 @@
+.popup-actions {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background: #FFFFFF;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.14);
+  border-radius: 12px;
+  width: 210px;
+  padding: 7px 0;
+  z-index: 10;
+  &_top {
+    top: 65px;
+    right: 10px;
+  }
+  &_bottom {
+    bottom: 65px;
+    left: 10px;
+  }
+}

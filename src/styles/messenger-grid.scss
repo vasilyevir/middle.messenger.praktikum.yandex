@@ -1,0 +1,8 @@
+.messenger-grid {
+  display: grid;
+  grid-template-columns: $widthMessengerHeader $widthMessenger;
+  height: 100%;
+  &_change-profile {
+    grid-template-columns: $widthChangeProfileNavbar $widthChangeProfile;
+  }
+}

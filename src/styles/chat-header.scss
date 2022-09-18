@@ -1,0 +1,53 @@
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+  box-sizing: border-box;
+  margin: 0 20px;
+  width: calc($widthMessenger - 40px);
+  border-bottom: 1px solid $lightBorderColor;
+  position: relative;
+  &__user-info{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  &__avatar-user{
+    width: 34px;
+    height: 34px;
+    border-radius: 24px;
+    object-fit: cover;
+  }
+  &__username{
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 13px;
+    color: $fontBlackColor;
+  }
+  &__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    width: 25px;
+    height: 25px;
+    background: none;
+    border-radius: 12px;
+    svg {
+      circle {
+        fill: $fontBlackColor;
+      }
+    }
+    &_checked {
+      background: $lightGreyBackground;
+      svg {
+        circle {
+          fill: $blueColor;
+        }
+      }
+    }
+  }
+}

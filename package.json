@@ -1,11 +1,20 @@
 {
-  "name": "my-project",
-  "source": "src/index.html",
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "app chat",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "dev": "parcel src/pages/login.hbs --no-cache",
+    "build": "parcel build src/pages/*.hbs",
+    "serve": "node server.js",
+    "start": "npm run build && npm run serve"
   },
+  "author": "vasilyevir",
+  "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.7.0"
+    "@anikin/parcel-transformer-handlebars": "^1.0.9",
+    "@parcel/transformer-sass": "^2.7.0",
+    "express": "^4.18.1",
+    "parcel": "^2.7.0",
+    "sass": "^1.54.9"
   }
 }

@@ -1,0 +1,91 @@
+.message-container {
+  height: calc(100vh - 108px);
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.message-row {
+  width: calc(100% - 40px);
+  margin: 10px 20px;
+  height: min-content;
+  display: flex;
+  flex-direction: row;
+  &_user{
+    justify-content: flex-end;
+  }
+  &_another-user {
+    justify-content: flex-start;
+  }
+
+}
+
+.message {
+  max-width: 402px;
+  width: max-content;
+  box-sizing: border-box;
+  border: 1px solid $lightBorderColor;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  &_user{
+    background: $backgroundMessageAnotherUser;
+  }
+  &_another-user {
+    background: $backgroundSelectedChat;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: $fontBlackColor;
+    margin: 0;
+    padding: 11px;
+  }
+  &__image {
+    object-fit: cover;
+    width: 316px;
+    height: 211px;
+  }
+  &__time {
+    font-size: 9px;
+    line-height: 9px;
+    box-sizing: border-box;
+    width: min-content;
+    color: $greyColor;
+    background: none;
+    position: relative;
+    gap: 4px;
+    display: flex;
+    margin: 0 0 0 4px;
+    height: 15px;
+    align-items: flex-end;
+    &_text {
+      float: right;
+    }
+    &_image {
+      background: rgba(82, 82, 82, 0.5);
+      border-radius: 30px;
+      color: $whiteColor;
+      position: absolute;
+      padding: 2px 7px;
+      bottom: 11px;
+      right: 11px;
+    }
+    svg {
+      height: 9px;
+    }
+  }
+  &__status-reading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_unread {
+      svg {
+        line {
+          stroke: $greyColor;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,223 @@
+---
+styles: ../styles/pages/messenger.scss
+bodyStyle: messenger-grid
+profile:
+    link: ./profile.hbs
+    title: В профиль
+searchInput:
+    id: search
+    type: text
+    placeholder: Поиск
+chat:
+    -
+        link: ./index.hbs
+        avatar: ../assets/avatar.jpg
+        altImage: Аватар
+        username: Андрей
+        lastMessage: Hello, World!
+        time: 10.59
+        amountUnreadMessage: 3
+    -
+        link: ./index.hbs
+        avatar: ../assets/avatar.jpg
+        altImage: Аватар
+        username: Андрей
+        lastMessage: Hello, World!
+        time: 10.59
+        isYourMessage: true
+        isChatSelected: true
+    -
+        link: ./index.hbs
+        avatar: ../assets/avatar.jpg
+        altImage: Аватар
+        username: Андрей
+        lastMessage: Hello, World!
+        time: 10.59
+        amountUnreadMessage: 3
+    -
+        link: ./index.hbs
+        avatar: ../assets/avatar.jpg
+        altImage: Аватар
+        username: Андрей
+        lastMessage: Hello, World!
+        time: 10.59
+    -
+        link: ./index.hbs
+        avatar: ../assets/avatar.jpg
+        altImage: Аватар
+        username: Андрей
+        lastMessage: Hello, World!
+        time: 10.59
+        amountUnreadMessage: 3
+    -
+        link: ./index.hbs
+        avatar: ../assets/avatar.jpg
+        altImage: Аватар
+        username: Андрей
+        lastMessage: Hello, World!
+        time: 10.59
+    -
+        link: ./index.hbs
+        avatar: ../assets/avatar.jpg
+        altImage: Аватар
+        username: Андрей
+        lastMessage: Hello, World!
+        time: 10.59
+        amountUnreadMessage: 3
+    -
+        link: ./index.hbs
+        avatar: ../assets/avatar.jpg
+        altImage: Аватар
+        username: Андрей
+        lastMessage: Hello, World!
+        time: 10.59
+    -
+        link: ./index.hbs
+        avatar: ../assets/avatar.jpg
+        altImage: Аватар
+        username: Андрей
+        lastMessage: Hello, World!
+        time: 10.59
+        amountUnreadMessage: 3
+    -
+        link: ./index.hbs
+        avatar: ../assets/avatar.jpg
+        altImage: Аватар
+        username: Андрей
+        lastMessage: Hello, World!
+        time: 10.59
+    -
+        link: ./index.hbs
+        avatar: ../assets/avatar.jpg
+        altImage: Аватар
+        username: Андрей
+        lastMessage: Hello, World!
+        time: 10.59
+        amountUnreadMessage: 3
+    -
+        link: ./index.hbs
+        avatar: ../assets/avatar.jpg
+        altImage: Аватар
+        username: Андрей
+        lastMessage: Hello, World!
+        time: 10.59
+    -
+        link: ./index.hbs
+        avatar: ../assets/avatar.jpg
+        altImage: Аватар
+        username: Андрей
+        lastMessage: Hello, World!
+        time: 10.59
+        amountUnreadMessage: 3
+    -
+        link: ./index.hbs
+        avatar: ../assets/avatar.jpg
+        altImage: Аватар
+        username: Андрей
+        lastMessage: Hello, World!
+        time: 10.59
+    -
+        link: ./index.hbs
+        avatar: ../assets/avatar.jpg
+        altImage: Аватар
+        username: Андрей
+        lastMessage: Hello, World!
+        time: 10.59
+        amountUnreadMessage: 3
+    -
+        link: ./index.hbs
+        avatar: ../assets/avatar.jpg
+        altImage: Аватар
+        username: Андрей
+        lastMessage: Hello, World!
+        time: 10.59
+header:
+    src: ../assets/avatar.jpg
+    altImage: Аватар
+    username: Андрей
+message:
+    -
+        text: Вау! Какой крутой и толстый кот!
+        isUserMessage: true
+        isNotReading: true
+        time: 11.53
+    -
+        image: ../assets/avatar.jpg
+        isUserMessage: false
+        time: 11.53
+    -
+        image: ../assets/avatar.jpg
+        isUserMessage: false
+        time: 11.53
+    -
+        image: ../assets/avatar.jpg
+        isUserMessage: false
+        time: 11.53
+    -
+        image: ../assets/avatar.jpg
+        isUserMessage: false
+        time: 11.53
+    -
+        image: ../assets/avatar.jpg
+        isUserMessage: false
+        time: 11.53
+    -
+        image: ../assets/avatar.jpg
+        isUserMessage: false
+        time: 11.53
+    -
+        image: ../assets/avatar.jpg
+        isUserMessage: true
+        time: 11.53
+        isNotReading: false
+    -
+        text: Привет! Смотри, какая картинка! Мне она так понравилась, что прям не могу!
+        isUserMessage: false
+        time: 11.53
+popupActionsChat:
+    isAlignTop: true
+    fields:
+        -
+            title: Добавить пользователя
+            image: ../assets/icons/add-user.svg
+        -
+            title: Удалить пользователя
+            image: ../assets/icons/delete.svg
+        -
+            title: Удалить чат
+            image: ../assets/icons/delete.svg
+
+popupActionsFile:
+    isAlignTop: false
+    fields:
+        -
+            title: Фото или Видео
+            image: ../assets/icons/add-user.svg
+        -
+            title: Файл
+            image: ../assets/icons/delete.svg
+        -
+            title: Локация
+            image: ../assets/icons/delete.svg
+---
+
+{{#extend "app" this}}
+
+    {{#content "navbar"}}
+        <div class="navbar">
+            {{> "search-header" this}}
+            <div class="chat-container">
+                {{#each chat}}
+                    {{> "chat" this}}
+                {{/each}}
+            </div>
+        </div>
+    {{/content}}
+
+    {{#content "main"}}
+        <div class="active-chat">
+            {{> "communication-component" this}}
+        </div>
+    {{/content}}
+
+{{/extend}}

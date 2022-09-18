@@ -1,0 +1,24 @@
+.profile-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 510px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $lightBorderColor;
+  &__input {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: right;
+    -webkit-text-fill-color: $greyColor;
+    color: $greyColor;
+    opacity: 1;
+  }
+  &:last-of-type {
+    border: none;
+  }
+}

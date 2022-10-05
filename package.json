@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "app chat",
   "scripts": {
-    "dev": "parcel src/pages/login.hbs --no-cache",
-    "build": "parcel build src/pages/*.hbs",
+    "dev": "parcel static/pages/login.hbs --no-cache",
+    "build": "parcel build static/pages/*.hbs",
     "serve": "node server.js",
     "start": "npm run build && npm run serve"
   },

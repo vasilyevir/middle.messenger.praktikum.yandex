@@ -133,20 +133,4 @@ chat:
         time: 10.59
 ---
 
-{{#extend "app" this}}
-    {{#content "navbar"}}
-        <div class="navbar">
-            {{> "search-header" this}}
-            <div class="chat-container">
-                {{#each chat}}
-                    {{> "chat" this}}
-                {{/each}}
-            </div>
-        </div>
-    {{/content}}
-    {{#content "main"}}
-        <div class="active-chat active-chat_not-selected">
-            <p class="active-chat__sign">Выберите чат чтобы отправить сообщение</p>
-        </div>
-    {{/content}}
-{{/extend}}
+{{!< html}}

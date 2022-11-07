@@ -1,5 +1,5 @@
 import Block from '../../core/Block';
-import './Card.scss';
+import './card.scss';
 
 interface CardProps {
     onSubmit: () => void;

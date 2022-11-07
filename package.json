@@ -6,6 +6,7 @@
     "dev": "parcel static/pages/*.hbs --no-cache",
     "build": "parcel build static/pages/*.hbs --no-cache",
     "serve": "node server.js",
+    "check": "tsc --noEmit",
     "start": "npm run build && npm run serve"
   },
   "author": "vasilyevir",
@@ -18,6 +19,7 @@
     "sass": "^1.54.9"
   },
   "dependencies": {
+    "@parcel/validator-typescript": "^2.7.0",
     "handlebars": "^4.7.7"
   }
 }

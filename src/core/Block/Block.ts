@@ -92,12 +92,12 @@ export class Block<P = any> {
     return true;
   }
 
-  setProps = (nextProps: P) => {
+  setProps = (nextProps: Partial<P>) => {
     if (!nextProps) {
       return;
     }
 
-    Object.assign(this.props, nextProps);
+    Object.assign(this.props && {}, nextProps);
   };
 
   setState = (nextState: any) => {

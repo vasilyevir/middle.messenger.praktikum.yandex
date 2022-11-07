@@ -1,5 +1,5 @@
 import { Profile } from './Profile'
-import {renderDOM} from "../../core/renderDom";
+import renderDOM from "../../core/renderDom";
 
 
 document.addEventListener("DOMContentLoaded", () => {

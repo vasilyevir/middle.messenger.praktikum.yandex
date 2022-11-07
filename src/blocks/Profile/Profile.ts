@@ -3,15 +3,9 @@ import '../../index';
 import arrow from '../../assets/icons/arrow.svg';
 import './Profile.scss';
 
-interface IProfile {
-    isEditable: boolean;
-    buttonContainer: string;
-    inputContainer: string;
-}
-
 export class Profile extends Block {
-    constructor(props: IProfile) {
-        super({...props});
+    constructor() {
+        super();
 
         this.setProps({
             link: "/",

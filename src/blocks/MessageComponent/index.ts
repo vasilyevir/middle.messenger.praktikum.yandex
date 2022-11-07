@@ -1,0 +1,1 @@
+export { MessageComponent as default } from './MessageComponent';

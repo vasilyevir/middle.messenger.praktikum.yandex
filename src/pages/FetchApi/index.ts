@@ -1,0 +1,1 @@
+export {FetchApi as default} from './FetchApi'

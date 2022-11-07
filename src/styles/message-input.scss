@@ -12,6 +12,7 @@
     gap: 10px;
     box-sizing: border-box;
     padding: 11px 0;
+    align-items: center;
     height: 100%;
     border-top: 1px solid $lightBorderColor;
   }
@@ -48,5 +49,8 @@
     border-radius: 14px;
     background: $blueColor;
     outline: none;
+    &_disabled {
+      background: gray;
+    }
   }
 }

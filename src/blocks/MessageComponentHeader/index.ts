@@ -1,0 +1,1 @@
+export { MessageComponentHeader as default } from './MessageComponentHeader';

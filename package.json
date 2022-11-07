@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "app chat",
   "scripts": {
-    "dev": "parcel static/pages/login.hbs --no-cache",
-    "build": "parcel build static/pages/*.hbs",
+    "dev": "parcel static/pages/*.hbs --no-cache",
+    "build": "parcel build static/pages/*.hbs --no-cache",
     "serve": "node server.js",
     "start": "npm run build && npm run serve"
   },
@@ -16,5 +16,8 @@
     "express": "^4.18.1",
     "parcel": "^2.7.0",
     "sass": "^1.54.9"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.7"
   }
 }

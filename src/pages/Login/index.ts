@@ -1,5 +1,5 @@
 import { LoginPage } from './login'
-import {renderDOM} from "../../core";
+import renderDOM from "../../core/renderDom";
 
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -1,0 +1,1 @@
+export { ContainerInputAuth as default } from './ContainerInputAuth';

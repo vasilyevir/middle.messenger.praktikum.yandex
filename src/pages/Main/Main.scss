@@ -1,0 +1,18 @@
+@import "../../styles/params";
+@import "../../styles/normalize";
+@import "../../styles/navbar";
+@import "../../styles/messenger-grid";
+@import "../../styles/active-chat";
+@import "../../styles/search-header";
+@import "../../styles/search-input";
+@import "../../styles/chat";
+@import "../../styles/chat-header";
+@import "../../styles/communication-container.scss";
+@import "../../styles/message";
+@import "../../styles/message-input";
+@import "../../styles/field-actions";
+@import "../../styles/popup-actions";
+
+#app {
+  height: 100vh;
+}

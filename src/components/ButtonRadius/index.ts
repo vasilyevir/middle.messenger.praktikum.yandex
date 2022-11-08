@@ -1,0 +1,1 @@
+export {ButtonRadius as default} from './ButtonRadius';

@@ -1,0 +1,1 @@
+export { MessageUser as default } from './MessageUser';

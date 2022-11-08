@@ -13,12 +13,35 @@
     outline: none;
     font-size: 13px;
     line-height: 13px;
-    text-align: right;
+    text-align: end;
+    opacity: 1;
     -webkit-text-fill-color: $greyColor;
     color: $greyColor;
-    opacity: 1;
+    &:focus {
+      color: $fontBlackColor;
+      -webkit-text-fill-color: $fontBlackColor;
+    }
   }
-  &:last-of-type {
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  &__error-message {
+    -webkit-text-fill-color: #FF2F2F;
+    color: #FF2F2F;
+    font-size: 11px;
+    line-height: 13px;
+    padding-top: 5px;
+    text-align: start;
+    opacity: 1;
+    width: 100%;
+    max-width: 510px;
+
+  }
+  &:last-child {
     border: none;
   }
 }

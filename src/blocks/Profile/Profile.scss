@@ -1,0 +1,36 @@
+@import "../../styles/params";
+@import "../../styles/normalize";
+@import "../../styles/navbar";
+@import "../../styles/messenger-grid";
+@import "../../styles/active-chat";
+@import "../../styles/search-header";
+@import "../../styles/search-input";
+@import "../../styles/chat";
+@import "../../styles/chat-header";
+@import "../../styles/communication-container";
+@import "../../styles/message";
+@import "../../styles/message-input";
+@import "../../styles/field-actions";
+@import "../../styles/popup-actions";
+@import "src/styles/profile-input";
+@import "src/styles/profile";
+
+#app {
+  height: 100vh;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 510px;
+}

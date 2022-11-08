@@ -1,0 +1,1 @@
+export {LinkAuth as default} from './LinkAuth';

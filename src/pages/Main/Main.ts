@@ -64,5 +64,3 @@ export class MainPage extends Block {
         `
     }
 }
-
-// {{> "search-header" this}}

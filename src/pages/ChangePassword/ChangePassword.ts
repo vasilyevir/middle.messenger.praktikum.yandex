@@ -1,5 +1,6 @@
 import Block from "../../core/Block";
 import '../../index';
+// @ts-ignore
 import avatar from "../../assets/avatar.jpg";
 
 export class ChangePasswordPage extends Block {
@@ -45,7 +46,7 @@ export class ChangePasswordPage extends Block {
                             type="password"
                             name="password"
                             title="Старый пароль"
-                            placeholder='********'
+                            value='********'
                             ref="oldPassword"
                     }}}
                     {{{
@@ -53,16 +54,16 @@ export class ChangePasswordPage extends Block {
                             type="password"
                             title="Новый пароль"
                             name="password"
-                            placeholder='**********'
+                            value='**********'
                             ref="newPassword"
                     }}}
 
                     {{{
                         ProfileRow
                             type="password"
-                            name="Повторите новый пароль"
+                            title="Повторите новый пароль"
                             name="password"
-                            placeholder='**********'
+                            value='**********'
                             ref="newPasswordAgain"
                     }}}
                     {{{

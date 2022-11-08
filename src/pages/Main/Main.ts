@@ -61,7 +61,6 @@ export class MainPage extends Block {
                     </div>
                 </main>
             </div>
-              
         `
     }
 }

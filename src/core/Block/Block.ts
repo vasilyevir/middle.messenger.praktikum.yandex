@@ -1,5 +1,6 @@
 import EventBus from '../EventBus';
 import {nanoid} from 'nanoid';
+// @ts-ignore
 import Handlebars from 'handlebars';
 
 interface BlockMeta<P = any> {
@@ -22,14 +23,14 @@ export class Block<P = any> {
   private readonly _meta: BlockMeta;
 
   // @ts-ignore
-  protected _element: Nullable<HTMLElement> = null;
+  _element: Nullable<HTMLElement> = null;
   protected readonly props: P;
   protected children: {[id: string]: Block} = {};
 
   eventBus: () => EventBus<Events>;
 
   protected state: any = {};
-  protected refs: {[key: string]: Block} = {};
+  refs: {[key: string]: Block} = {};
 
   public constructor(props?: P) {
     const eventBus = new EventBus<Events>();
@@ -97,7 +98,8 @@ export class Block<P = any> {
       return;
     }
 
-    Object.assign(this.props && {}, nextProps);
+    // @ts-ignore
+    Object.assign(this.props, nextProps);
   };
 
   setState = (nextState: any) => {
@@ -105,6 +107,7 @@ export class Block<P = any> {
       return;
     }
 
+    // @ts-ignore
     Object.assign(this.state, nextState);
   };
 
@@ -206,6 +209,7 @@ export class Block<P = any> {
     /**
     * Заменяем заглушки на компоненты
     */
+    // @ts-ignore
     Object.entries(this.children).forEach(([id, component]) => {
       /**
        * Ищем заглушку по id

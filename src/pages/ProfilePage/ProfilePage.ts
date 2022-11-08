@@ -1,6 +1,7 @@
 import Block from '../../core/Block';
 import '../../index';
 import './Profile.scss';
+// @ts-ignore
 import avatar from "../../assets/avatar.jpg";
 
 export class ProfilePage extends Block {
@@ -35,7 +36,8 @@ export class ProfilePage extends Block {
                         ProfileRow
                             value="${this.props.mail}"
                             type="email"
-                            name="Почта"
+                            title="Почта"
+                            name="email"
                             notDisabled=isEditable
                             ref="mailRow"
                     }}}
@@ -43,7 +45,8 @@ export class ProfilePage extends Block {
                         ProfileRow
                             value="${this.props.login}"
                             type="string"
-                            name="Логин"
+                            title="Логин"
+                            name="login"
                             disabled=isEditable
                             notDisabled=onBlur
                     }}}
@@ -51,7 +54,8 @@ export class ProfilePage extends Block {
                         ProfileRow
                             value="${this.props.name}"
                             type="string"
-                            name="Имя"
+                            title="Имя"
+                            name="name"
                             onBlur=onBlur
                             notDisabled=isEditable
                     }}}
@@ -59,7 +63,8 @@ export class ProfilePage extends Block {
                         ProfileRow
                             value="${this.props.secondName}"
                             type="string"
-                            name="Фамилия"
+                            title="Фамилия"
+                            name="name"
                             onBlur=onBlur
                             notDisabled=isEditable
                     }}}
@@ -67,7 +72,8 @@ export class ProfilePage extends Block {
                         ProfileRow
                             value="${this.props.nameInChat}"
                             type="string"
-                            name="Имя в чате"
+                            title="Имя в чате"
+                            name="name"
                             onBlur=onBlur
                             notDisabled=isEditable
                     }}}
@@ -75,7 +81,8 @@ export class ProfilePage extends Block {
                         ProfileRow
                             value="${this.props.phone}"
                             type="tel"
-                            name="Телефон"
+                            title="Телефон"
+                            name="phone"
                             onBlur=onBlur
                             notDisabled=isEditable
                     }}}

@@ -1,6 +1,7 @@
 import Block from '../../core/Block';
 import '../../index';
 import './Profile.scss';
+// @ts-ignore
 import avatar from "../../assets/avatar.jpg";
 
 export class ProfileEditPage extends Block {
@@ -17,26 +18,20 @@ export class ProfileEditPage extends Block {
             isEditable: false,
             onSubmit: (e: SubmitEvent) => {
                 e.preventDefault();
-                // @ts-ignore
-                const mailRowEl = this.refs.mailRow.refs.input._element as HTMLInputElement;
-                // @ts-ignore
+                const mailRowEl = this.refs.emailRow.refs.input._element as HTMLInputElement;
                 const loginRowEl = this.refs.loginRow.refs.input._element as HTMLInputElement;
-                // @ts-ignore
                 const nameRowEl = this.refs.nameRow.refs.input._element as HTMLInputElement;
-                // @ts-ignore
                 const surnameRowEl = this.refs.surnameRow.refs.input._element as HTMLInputElement;
-                // @ts-ignore
                 const nameInChatRowEl = this.refs.nameInChatRow.refs.input._element as HTMLInputElement;
-                // @ts-ignore
                 const phoneRowEl = this.refs.phoneRow.refs.input._element as HTMLInputElement;
 
                 console.log({
-                    mail: mailRowEl.value,
-                    login: loginRowEl.value,
-                    name: nameRowEl.value,
-                    surname: surnameRowEl.value,
-                    nameInChat: nameInChatRowEl.value,
-                    tel: phoneRowEl
+                    mail: mailRowEl.value || mailRowEl.placeholder,
+                    login: loginRowEl.value || loginRowEl.placeholder,
+                    name: nameRowEl.value || nameRowEl.placeholder,
+                    surname: surnameRowEl.value || surnameRowEl.placeholder,
+                    nameInChat: nameInChatRowEl.value || nameInChatRowEl.placeholder,
+                    tel: phoneRowEl.value || phoneRowEl.placeholder
                 })
             }
         })
